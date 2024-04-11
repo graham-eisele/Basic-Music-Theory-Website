@@ -1,0 +1,308 @@
+.worksheet-title
+{
+    margin-top:1vw;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    color:#404040;
+    font-family: 'Rubik', sans-serif;
+    font-size:2vw;
+}
+
+.worksheet-description
+{
+    width:80%;
+    margin-top:1vw;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    color:#404040;
+    font-family: 'Rubik', sans-serif;
+    font-size:2vw;
+}
+
+.worksheet-div
+{
+    z-index:1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment, if needed */
+
+}
+
+.quiz-title
+{
+
+    margin-top:5vw;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    color:#404040;
+    font-family: 'Rubik', sans-serif;
+    font-size:4vw;
+}
+
+#numQuestionsDiv
+{
+    display:flex;
+    flex-direction:column;
+    font-family: 'Rubik', sans-serif;
+    font-size:1.5vw;
+}
+
+#numQuestions
+{
+    margin-left:0.25vw;
+    margin-top:0.25vw;
+    width:4vw;
+    height:3vw;
+    font-size:1.25vw;
+    border-radius: 0.3vw;
+    font-family: 'Rubik', sans-serif;
+    padding-left:0.4vw;
+    border-color:#e9e9eb;
+    border-style: solid;
+}
+
+#numQuestions:invalid
+{
+    color: #FF595E;
+}
+
+#info
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-top:2vw;
+}
+
+/*  */
+/* Remove this container when use*/
+.component-title {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+}
+
+/* The switch - the box around the slider */
+.container {
+  margin-top:1vw;
+  margin-left:1vw;
+  width: 3vw;
+  height: 1.8vw;
+  position: relative;
+}
+
+/* Hide default HTML checkbox */
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.switch {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #e9e9eb;
+  border-radius: 0.97vw;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+/* The slider */
+.slider {
+  width: 1.8vw;
+  height: 1.8vw;
+  position: absolute;
+  left: calc(50% - 2vw);
+  top: calc(50% - 1.8vw/2);
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.checkbox:checked + .switch {
+  background-color: #34C759;
+}
+
+.checkbox:checked + .switch .slider {
+  left: calc(50% - 1.58vw/2 + 0.58vw);
+  top: calc(50% - 1.8vw/2);
+}
+
+#isTimedDiv
+{
+    margin-left:1vw;
+    margin-top:0vw;
+    font-size:1.5vw;
+    font-family: 'Rubik', sans-serif;
+}
+
+#timeLimitDiv
+{
+
+    margin-left:1vw;
+    display:flex;
+    flex-direction:column;
+    font-family: 'Rubik', sans-serif;
+    font-size:1.5vw;
+    display:none;
+
+}
+
+#timeLimit
+{
+    margin-left:0.25vw;
+    width:4vw;
+    height:3vw;
+    font-size:1.25vw;
+    border-radius: 0.3vw;
+    font-family: 'Rubik', sans-serif;
+    padding-left:0.4vw;
+    border-color:#e9e9eb;
+    border-style: solid;
+}
+
+#timeLimit:invalid
+{
+    color: #FF595E;
+}
+
+#startQuizButtonDiv
+{
+    display:flex;
+    margin-top:3vw;
+    justify-content:center;
+}
+
+#startQuizButton
+{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 1vw;
+    width:10vw;
+    line-height: 1;
+    border-radius: 2vw;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 0.1vw solid transparent;
+    letter-spacing: 0.1vw;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background-color: #34C759;
+    height: 3vw;
+
+}
+
+#startQuizButton:hover{
+        background-color: #15883e;
+}
+
+/* Pop Up Message Stuff */
+#popUpMessageContainer
+{
+    position:relative;
+    width:100%;
+    height:100vw;
+    margin-top:-25vw;
+    visibility:hidden;
+    background-color:rgba(255, 255, 255, 0.5);
+    z-index:2;
+}
+
+#errorMessageRect {
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:9vw;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  height: 15vw;
+  width: 15vw;
+  border-radius:2vw;
+  background-color: #FFFFFF;
+  outline:solid;
+  outline-color:#A0A0A0;
+}
+
+#topText
+{
+    font-family: 'Rubik', sans-serif;
+    justify-content:center;
+    text-align:center;
+    padding-top:1.5vw;
+    font-size:1.75vw;
+    color:#FF474D;
+}
+
+#popupMessageText
+{
+    width:13vw;
+    font-family: 'Rubik', sans-serif;
+    justify-content:center;
+    text-align:center;
+    padding-top:1.5vw;
+    font-size:1vw;
+}
+
+#messageDismissButton
+{
+    font-family: 'Rubik', sans-serif;
+    margin-top:1.25vw;
+    width:8.75vw;
+    height:3.12vw;
+    border-radius:2vw;
+    background-color:#FF474D;
+    color:white;
+    border:none;
+    line-height: 1;
+    border-radius: 2vw;
+    font-size:1vw;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 0.1vw solid transparent;
+    letter-spacing: 0.1vw;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+}
+
+#messageDismissButton:hover
+{
+    background-color:#D33B40;
+}
+
+#disableWebsiteRect
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15vw;
+    width: 15vw;
+    background-color:white;
+    margin-top:12vw;
+}
+
+#userCheckButtonElement:hover
+{
+    background-color: #C1C1C1;
+}

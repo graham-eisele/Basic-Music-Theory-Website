@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/worksheets.css' %}"/>
+{% endblock %}
+
+<body id="worksheets-body">
+
+    <div id="header-one">
+        <h1 id="worksheets-text">
+            Practice Worksheets
+        </h1>
+    </div>
+
+    <ol id="worksheet-list">
+            <li id="worksheet-one-div">
+                <a class="worksheet-name" href="worksheets/1">
+                    Worksheet 1
+                </a>
+
+                <p class="worksheet-description">
+                    Note name identification in different clefs.
+                </p>
+            </li>
+
+        </ol>
+
+
+</body>
+
+{% endblock %}

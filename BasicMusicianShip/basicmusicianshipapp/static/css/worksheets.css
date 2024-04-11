@@ -1,0 +1,41 @@
+#header-one
+{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    height:6vw;
+}
+
+#worksheets-text
+{
+    margin-left:1.5vw;
+    color:#404040;
+    font-family: 'Rubik', sans-serif;
+    font-size:2.5vw;
+    margin-bottom:0vw;
+}
+
+#worksheet-list
+{
+    list-style-type: none;
+    margin-left:1.5vw;
+    margin-top:0vw;
+}
+
+#worksheet-list li{
+    color:#404040;
+    font-family: 'Rubik', sans-serif;
+    margin: 1vw 0;
+}
+
+#worksheet-list li .worksheet-name
+{
+    font-size:1.25vw;
+}
+
+#worksheet-list li .worksheet-description
+{
+    margin-top:0.5vw;
+    font-size:1vw;
+}

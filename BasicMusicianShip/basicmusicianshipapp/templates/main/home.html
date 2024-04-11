@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+{% block extra_head %}
+
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}"/>
+{% endblock %}
+
+
+<body id="homepage-body">
+
+        <h1>
+            Master Music Theory with Fun Worksheets!
+        </h1>
+        <div>
+            <img id="hero-musical-notes" src="static/images/musical_notes.png">
+
+            <a href="{% url 'worksheets' %}">
+                <button id="start-practicing-btn">
+                    Start practicing now!
+                </button>
+            </a>
+
+        </div>
+
+</body>
+
+{% endblock %}

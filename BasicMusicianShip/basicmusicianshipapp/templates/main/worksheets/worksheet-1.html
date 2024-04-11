@@ -1,0 +1,104 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/worksheets/worksheet-1.css' %}"/>
+
+{% endblock %}
+
+
+<h1 class="worksheet-title">Worksheet #1</h1>
+<h2 class="worksheet-description">Enter the name of the note plus the name of the accidental if there is one.
+    If the note is natural just put the note name. For example: E, Bb, F#.</h2>
+<body id="worksheet-one-body" class="worksheet-body"
+>
+    <div class="worksheet-div">
+
+            <!--
+             File containing url paths to images
+             -->
+             <script>
+                var staffImageUrl = "{% static 'images/music_staff.svg' %}"
+
+                var cClefUrl = "{% static 'images/clefs/c_clef.svg' %}"
+                var fClefUrl = "{% static 'images/clefs/f_clef.svg' %}"
+                var gClefUrl = "{% static 'images/clefs/g_clef.svg' %}"
+
+                var wholeNoteUrl = "{% static 'images/notes/whole/wholeNote-regular.svg' %}"
+                var wholeNoteLineUrl = "{% static 'images/notes/whole/wholeNote-line.svg' %}"
+                var wholeNoteAboveUrl = "{% static 'images/notes/whole/wholeNote-above.svg' %}"
+                var wholeNoteBelowUrl = "{% static 'images/notes/whole/wholeNote-below.svg' %}"
+
+                var noteLineUrl = "{% static 'images/notes/noteLine.svg' %}"
+
+                var flatAccidentalUrl = "{% static 'images/accidentals/flat.svg' %}"
+                var naturalAccidentalUrl = "{% static 'images/accidentals/natural.svg' %}"
+                var sharpAccidentalUrl = "{% static 'images/accidentals/sharp.svg' %}"
+
+                var pianoKeyboardUrl = "{% static 'images/PianoKeyboard.svg' %}"
+            </script>
+
+            <script type="text/javascript" src="{% static 'javascript/worksheet_base.js' %}"></script>
+            <script type="text/javascript" src="{% static 'javascript/worksheet_one.js' %}"></script>
+
+            <div id="quiz-start-info">
+                 <h1 class="quiz-title">Quiz</h1>
+
+                 <div id="info">
+
+                        <div id="numQuestionsDiv">
+                             <label for="numQuestions">Number of Questions</label>
+                             <input type="number" id="numQuestions" name="numQuestions" value="40" pattern="[1-9]\d*" min="4" max="100">
+                        </div>
+
+                        <div id="isTimedDiv">
+                            <label for="isTimeLimitToggle">Timed</label>
+                            <div class="container">
+                                <input type="checkbox" class="checkbox" id="isTimeLimitToggle">
+                                <label class="switch" for="isTimeLimitToggle">
+                                <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="timeLimitDiv">
+                             <label for="timeLimit">Minutes</label>
+                             <input type="number" id="timeLimit" name="timeLimit" value="10" pattern="[1-9]\d*" min="1" max="120">
+                        </div>
+
+                 </div>
+
+               <div id="startQuizButtonDiv">
+                    <button id="startQuizButton">Start Quiz</button>
+                </div>
+
+                </div>
+            </div>
+
+            <div id="reset-worksheet">
+
+            </div>
+
+            <div id="popUpMessageContainer">
+                    <div class="rectangle" id="errorMessageRect">
+                        <p id="topText">Sorry :(</p>
+                        <p id="popupMessageText">Please enter a number that is at least 4 or at most 100 for the number of questions</p>
+                        <button id="messageDismissButton">Okay</button>
+            </div>
+
+    </div>
+
+    <div id="bottom-info">
+
+
+
+    </div>
+
+
+
+</body>
+
+{% include 'main/barline.html' %}
+
+{% endblock %}

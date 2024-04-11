@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}"/>
+{% endblock %}
+
+<body id="about-body">
+    <h1 id="about-heading">Bio</h1>
+
+    <p id="about-description">
+        Greetings! My is Graham, and I am a Computer Engineering student at the University of Arkansas.
+        This website is a product of my passion for honing my web framework skills.
+        Crafted entirely with Django, it serves as a dynamic platform born from my love for music.
+        While pursuing my major, I delved into the world of music through a basic musicianship class tailored for music majors.
+        This site emerged as a valuable tool for applying and reinforcing the skills acquired in that enlightening course.
+        Join me on this journey of skill development and exploration!
+
+    </p>
+
+    <img id="profile-image" src="{% static 'images/github-profile.png' %}">
+
+    <ol id="socials-list">
+        <li class="socials-li">
+              <img id="github-logo" src="{% static 'images/github-logo.svg' %}">
+                <a id="github-link" href="https://github.com/graham-eisele">
+                    my github
+                </a>
+        </li>
+
+
+        <li class="socials-li">
+            <img id="linkedin-logo" src="{% static 'images/linkedin-logo.svg' %}">
+            <a id="linked-link" href="https://github.com/graham-eisele">
+                my linkedin
+            </a>
+        </li>
+
+
+
+    </ol>
+
+
+
+</body>
+
+{% endblock %}
